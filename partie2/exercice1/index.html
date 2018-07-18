@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Canvas Partie 2 Exercice 1</title>
+  <style media="screen">
+    html, body { height: 100%; width: 100%; margin: 0; padding: 0; background-color: lightgrey; text-align: center;}
+    #canvas { border: 1px solid black; margin: 15% auto; background-color: white;}
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="400" height="400"></canvas>
+  <script>
+  var c = document.getElementById( "canvas" );
+  var ctx = c.getContext("2d");
+  ctx.lineWidth = 3;
+  //Haut de la glace arc de cercle inversé par math.pi true
+  ctx.beginPath();
+  ctx.arc(200,100,50,0,Math.PI,true);
+  // Couleur de la glace
+  ctx.fillStyle = "#8A0908";
+  ctx.fill();
+  ctx.stroke();
+  //Début du cône de glace
+  ctx.beginPath();
+  ctx.moveTo(150,100);
+  ctx.lineTo(250,100);
+  ctx.lineTo(200,250)
+  ctx.closePath();
+  // Couleur du cône
+  ctx.fillStyle = "#AA6522";
+  ctx.fill();
+  ctx.stroke();
+  </script>
+</body>
+</html>

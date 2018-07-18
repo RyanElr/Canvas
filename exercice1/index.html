@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas - exercice 1</title>
+    <style media="screen">
+      html, body { height: 100%; width: 100%; margin: 0; padding: 0; background-color: lightgrey; text-align: center;}
+      #mon_canvas { border: 1px solid black; margin: 15% auto; background-color: white;}
+    </style>
+  </head>
+  <body>
+    <canvas id="mon_canvas" height="400px" width="400px">
+  Texte alternatif pour les navigateurs ne supportant pas Canvas.
+</canvas>
+<script type="text/javascript">
+var c = document.getElementById("mon_canvas");
+var ctx = c.getContext("2d");
+//Tout est fait en segments pour l'exercice 1
+// Toit de la maison
+ctx.beginPath();
+ctx.moveTo(200,50);
+ctx.lineTo(100,150);
+ctx.lineTo(300,150);
+ctx.closePath();
+ctx.fillStyle = "#D7823E";
+ctx.fill();
+ctx.stroke()
+// Façade de la maison
+ctx.beginPath();
+ctx.moveTo(100,150);
+ctx.lineTo(100,350);
+ctx.lineTo(300,350);
+ctx.lineTo(300,150);
+ctx.closePath();
+ctx.fillStyle = "#A1D8E6";
+ctx.fill();
+ctx.stroke()
+//Fenêtre Gauche
+ctx.beginPath();
+ctx.moveTo(120,170);
+ctx.lineTo(120,210);
+ctx.lineTo(160,210);
+ctx.lineTo(160,170);
+ctx.closePath();
+ctx.fillStyle = "#c9c9c9";
+ctx.fill();
+ctx.stroke()
+//Fenêtre Droite
+ctx.beginPath();
+ctx.moveTo(240,170);
+ctx.lineTo(240,210);
+ctx.lineTo(280,210);
+ctx.lineTo(280,170);
+ctx.closePath();
+ctx.fillStyle = "#c9c9c9";
+ctx.fill();
+ctx.stroke()
+//Porte
+ctx.beginPath();
+ctx.moveTo(170,275);
+ctx.lineTo(170,350);
+ctx.lineTo(230,350);
+ctx.lineTo(230,275);
+ctx.closePath();
+ctx.fillStyle = "#c9c9c9";
+ctx.fill();
+ctx.stroke()
+</script>
+
+  </body>
+</html>
