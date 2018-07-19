@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Canvas Exercice 2</title>
+  <style media="screen">
+    html, body { height: 100%; width: 100%; margin: 0; padding: 0; background-color: lightgrey; text-align: center;}
+    #canvas1 { border: 1px solid black; margin: 15% auto; background-color: white;}
+  </style>
+</head>
+<body>
+  <canvas style="background-color:blue;" id="canvas1" width="400" height="400">
+  </canvas>
+  <script>
+  var c = document.getElementById("canvas1");
+  var ctx = c.getContext("2d");
+  //Tête de soucoupe
+  ctx.beginPath();
+  ctx.fillStyle = "white";
+  ctx.moveTo(140,200);
+  ctx.quadraticCurveTo(200,40,260,220);
+  ctx.fill();
+
+  //premier arc de cercle de la soucoupe (supérieur)
+  ctx.beginPath();
+  ctx.fillStyle = "#E0E1F3";
+  ctx.moveTo(100,200);
+  ctx.quadraticCurveTo(200,130,300,200);
+  ctx.fill();
+
+  //Deuxième arc de cercle de la soucoupe (inférieur)
+  ctx.beginPath();
+  ctx.fillStyle = "#E0E1F3";
+  ctx.moveTo(100,200);
+  ctx.quadraticCurveTo(200,280,300,200);
+  ctx.fill();
+
+  </script>
+</body>
+</html>
